@@ -1,0 +1,9 @@
+label {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+span label {
+    font-weight: initial;
+    text-decoration: none;
+}

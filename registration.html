@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Registration Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>Registration Form</h1>
+    </header>
+
+    <hr>
+
+    <div>* = required</div><br>
+
+    <form action="">
+        <label for="name">Name*</label><br>
+        <input 
+            type="text" 
+            id="name"
+            placeholder="First Name" 
+            required 
+            autofocus
+        >
+        <input 
+            type="text" 
+            id="name"
+            placeholder="Last Name" 
+            required
+        >
+        <br><br>
+
+        <label for="email">Email*</label><br>
+        <input 
+            type="text"
+            id="email" 
+            placeholder="email@address.com"
+        >
+        <br><br>
+
+        <label for="">Gender*</label><br>
+            <span class="gender">
+                <input 
+                    name="gender" 
+                    id="male" 
+                    type="radio" 
+                    value="male"
+                >
+                <label for="male">Male</label>
+
+                <input 
+                    name="gender" 
+                    id="female" 
+                    type="radio" 
+                    value="female"
+                >
+                <label for="female">Female</label>
+
+                <input 
+                    name="gender" 
+                    id="other" 
+                    type="radio" 
+                    value="other"
+                >
+                <label for="other">Other</label>
+            </span> 
+        <br><br>
+
+        <label for="telephone">Telephone*</label><br>
+        <input 
+            type="text"
+            id="telephone"
+            size="3"
+            maxlength="3"
+            max="3"
+            placeholder="123"
+        > -
+        <input 
+            type="text"
+            id="telephone"
+            size="3"
+            maxlength="3"
+            max="3"
+            placeholder="123"
+        > - 
+        <input 
+            type="text"
+            id="telephone"
+            size="4"
+            maxlength="4"
+            max="4"
+            placeholder="1234"
+        >
+        <br><br>
+
+        <label for="birth">DOB*</label><br>
+        <input 
+            type="date"
+            id="birth"
+        >
+        <br><br>
+
+        <label for="message">Tell Us About Yourself</label><br>
+        <textarea name="message" id="messgae" cols="50" rows="5">
+            Hello there, and I'm so sorry.
+        </textarea><br><br>
+
+        <label for="hobbies">Hobbies</label><br>
+        <input type="checkbox" id="hobbies">
+        <span>
+            <label for="hobbies">Music</label>
+        </span>
+        <input type="checkbox" id="hobbies">
+        <span>
+            <label for="hobbies">Lifting</label>
+        </span>
+        <input type="checkbox" id="hobbies">
+        <span>
+            <label for="hobbies">Coding</label>
+        </span>
+        <input type="checkbox" id="hobbies">
+        <span>
+            <input 
+                type="text"
+                placeholder="Other"
+            >
+        </span>
+        <br><br>
+
+        <label for="">Household Income</label><br>
+        <select name="" id="">
+            <option value="$39,000 or less">$39,999 or less</option>
+            <option value="$40,000 - $79,999">$40,000 - $79,999</option>
+            <option value="$80,000 or more">$80,000 or more</option>
+        </select><br><br>
+
+        <label for="family">Number of People in Household</label><br>
+        <input 
+            type="number"
+            id="family"
+            maxlength="2"
+            max="20"
+            step="1"
+            value="1"
+        ><br><br>
+
+        <label for="username">Username*</label>
+        <input 
+            id="username"
+            type="text"
+            placeholder="firstlast#"
+        ><br>
+
+        <label for="password">Password*</label>     
+        <input 
+            type="password"
+            id="password"
+            placeholder="a-z, #, symbols"
+        ><br>
+
+        <label for="password">Confirm Password*</label>
+        <input 
+            type="password"
+            id="password"
+            placeholder="a-z, #, symbols"
+        ><br><br>
+
+        <input type="checkbox" id="agree" value="1" onclick="terms_changed(this)">
+        <span>
+            <label for="agree">By signing up, you agree to the <a href="#">Terms of Agreement</a></label>
+        </span><br><br>
+
+        <button type="submit" id="submit_button" disabled>Sign Up</button>
+    </form>
+
+    <script>
+        function terms_changed(termsCheckBox){
+    //If the checkbox has been checked
+    if(termsCheckBox.checked){
+        //Set the disabled property to FALSE and enable the button.
+        document.getElementById("submit_button").disabled = false;
+    } else{
+        //Otherwise, disable the submit button.
+        document.getElementById("submit_button").disabled = true;
+    }
+}
+    </script>
+</body>
+</html>
